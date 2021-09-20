@@ -9,15 +9,17 @@ For more information about HOC2, read/cite the paper:
     
 The data used in the paper can be found at the [M4 Competition repo](https://github.com/Mcompetitions/M4-methods) (M4 dataset) and at the [MComp](https://cloud.r-project.org/web/packages/Mcomp/index.html) R package (M1 and M3 datasets).
 
-# Description
-There is a folder for each part of the framework: *methods*, *clustering*, *training* and *test*, each one including source code and binary files. 
+# Repository description
+There is a folder for each phase of the framework: *methods*, *clustering*, *training* and *test*, each one including source code and binary files. 
 
-For simplcity sake, the files are set to use **YEARLY** data from the **M4** dataset, with only 10% of the original data for the training phase. 
+For simplcity sake, all the source files here are set to use **YEARLY** data from the **M4** dataset, with only 10% of the original data for the *training* phase. 
+ 
+The *methods* folder include source files to fit each individual method considered to be combined (in this case, 5: ETS, AUTOARIMA, THETA, TBATS and SNAIVE) and also a source file to compute their simple average (*simpleAVG.R*). Results are computed in binary (RData) and text (CSV) files.
 
 Note that theres is a *training* file for each non-empty *cluster* (in this case, clusters 1, 2, 3, 10, 11 and 12). 
 
-The clusters may be trained in paralalel but all resulting training file - e.g. "trainLog01.RData" for cluster 1 - should be joined with "join.R" in a single binary file: "trainLog.RData". This last file shall then be used as input for the *test* phase.
+The clusters may be trained in paralalel but all resulting training file - e.g. *trainLog01.RData* for cluster 1 - should be joined with *join.R* in a single binary file: *trainLog.RData*. This last file shall then be used as input for the *test* phase.
 
-Each folder contains "report" files for reporting results. 
+Each folder contains *report* files for reporting results. 
 
 Enjoy!
